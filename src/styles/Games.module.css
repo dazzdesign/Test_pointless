@@ -34,7 +34,7 @@
     text-align: center;
     padding: 20px;
     width: 300px;
-    min-height: 400px; /* Hauteur minimale pour garantir uniformité */
+    min-height: 400px; 
     display: flex;
     flex-direction: column;
 }
@@ -53,7 +53,7 @@
     width: 80%;
     height: auto;
     margin-bottom: 20px;
-    flex-grow: 1; /* Permet à l'image de s'étendre sans affecter la position du bouton */
+    flex-grow: 1; 
 }
 
 .cardButton {
@@ -64,7 +64,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: auto; /* Cette propriété place le bouton en bas de la carte */
+    margin-top: auto; 
 }
 
 .cardButton:hover {

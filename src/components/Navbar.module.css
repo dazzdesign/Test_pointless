@@ -1,89 +1,79 @@
-/* Styles de la barre de navigation */
 .navbar {
   width: 100%;
-  background-color: transparent; /* Fond transparent */
-  padding: 1rem 2rem; /* Espacement pour un peu d'air */
+  background-color: transparent;
+  padding: 1rem 2rem;
 }
 
-/* Container pour la navigation */
 .nav {
   display: flex;
-  align-items: center; /* Centrer verticalement */
-  justify-content: space-between; /* Espacer les éléments */
-  max-width: 1200px; /* Largeur maximale de la barre de navigation */
-  margin: 0 auto; /* Centrer la navigation */
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Styles pour le logo */
 .nameDomain {
   display: flex;
-  align-items: center; /* Centrer verticalement l'image */
+  align-items: center;
 }
 
-/* Ajustement du logo */
 .nameDomain img {
-  max-width: 200px; /* Taille du logo */
-  height: auto; /* Préserver les proportions */
-  margin-right: 1rem; /* Espacement après le logo */
+  max-width: 200px;
+  height: auto;
+  margin-right: 1rem;
 }
 
-/* Liens de navigation */
 .navLinks {
   display: flex;
-  gap: 20px; /* Espace entre les liens */
+  gap: 20px;
 }
 
-/* Styles pour le menu déroulant */
 .dropdown {
-  position: relative; /* Nécessaire pour le menu déroulant */
+  position: relative;
   display: inline-block;
 }
 
 .dropdownToggle {
-  color: #fff; /* Couleur du texte des liens */
+  color: #fff;
   text-decoration: none;
-  font-size: 1.1rem; /* Taille du texte */
-  padding: 0.5rem 1rem; /* Ajout de padding pour une zone de clic plus grande */
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
   transition: color 0.3s ease;
 }
 
 .dropdownToggle:hover {
-  color: #BFE1C9; /* Couleur du lien au survol */
+  color: #BFE1C9;
 }
 
-/* Contenu du menu déroulant (caché par défaut) */
 .dropdownContent {
-  display: none; /* Masqué par défaut */
+  display: none;
   position: absolute;
-  background-color: #222831; /* Fond sombre et sobre */
-  border-bottom-left-radius: 8px; /* Bord arrondi en bas à gauche */
-  border-bottom-right-radius: 8px; /* Bord arrondi en bas à droite */
-  min-width: 160px; /* Largeur minimale */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet flottant */
-  z-index: 1; /* Superposition */
-  overflow: hidden; /* Masquer tout débordement */
+  background-color: #222831;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  overflow: hidden;
 }
 
-/* Apparence des liens dans le menu déroulant */
 .dropdownContent a {
-  color: #ecf0f1; /* Couleur des liens */
-  padding: 12px 16px; /* Espacement interne pour chaque lien */
-  text-decoration: none; /* Supprimer le soulignement */
-  display: block; /* Prendre toute la largeur */
+  color: #ecf0f1;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
   transition: background-color 0.3s ease;
 }
 
 .dropdownContent a:hover {
-  background-color: #34495e; /* Changement de couleur de fond au survol */
+  background-color: #34495e;
 }
 
-/* Afficher le menu déroulant lors du survol */
 .dropdown:hover .dropdownContent {
-  display: block; /* Rendre visible le menu au survol */
-  animation: fadeIn 0.3s ease; /* Animation d'apparition fluide */
+  display: block;
+  animation: fadeIn 0.3s ease;
 }
 
-/* Animation d'apparition du menu */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -95,54 +85,49 @@
   }
 }
 
-/* Styles des liens principaux */
 .navLinks a {
-  color: #fff; /* Blanc pour les liens principaux */
-  text-decoration: none; /* Pas de soulignement */
+  color: #fff;
+  text-decoration: none;
   font-size: 1.1rem;
-  transition: color 0.3s ease; /* Transition fluide sur la couleur */
+  transition: color 0.3s ease;
 }
 
 .navLinks a:hover {
-  color: #BFE1C9; /* Changer la couleur au survol */
+  color: #BFE1C9;
 }
 
-/* Styles pour la section de connexion et de balance */
 .connectSection {
-  display: flex; /* Centrer les éléments */
-  justify-content: space-between; /* Espacement entre la balance et le bouton */
-  align-items: center; /* Aligner verticalement */
-  padding: 0 2rem; /* Espacement horizontal autour de la section */
-  background-color: transparent; /* Fond transparent */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: transparent;
 }
 
-/* Styles pour le conteneur de la balance */
 .balanceContainer {
-  display: flex; /* Flexbox pour l'alignement */
-  align-items: center; /* Aligner verticalement */
+  display: flex;
+  align-items: center;
 }
 
-/* Styles pour le texte de la balance */
 .balanceText {
-  color: #fff; /* Couleur du texte */
-  margin-right: 10px; /* Espacement entre le texte et l'icône */
+  color: #fff;
+  margin-right: 10px;
 }
 
-/* Styles responsives */
 @media (max-width: 768px) {
   .nav {
-    flex-direction: column; /* Passer les éléments en colonne */
-    align-items: flex-start; /* Aligner à gauche */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .navLinks {
-    flex-direction: column; /* Liens en colonne */
-    gap: 10px; /* Espacement réduit */
+    flex-direction: column;
+    gap: 10px;
   }
 
   .connectSection {
-    flex-direction: column; /* Disposer les éléments en colonne sur mobile */
-    align-items: flex-start; /* Aligner à gauche */
-    padding: 1rem; /* Espacement réduit pour mobile */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
   }
 }

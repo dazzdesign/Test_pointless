@@ -8,17 +8,13 @@ const History = () => {
   const [windowWidth, setWindowWidth] = useState<number>(0); // État pour stocker la largeur de la fenêtre
 
   useEffect(() => {
-    // Fonction pour mettre à jour la largeur de la fenêtre
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    // Ajout de l'écouteur d'événements pour le redimensionnement de la fenêtre
     window.addEventListener('resize', handleResize);
-    // Appel initial pour définir la largeur de la fenêtre au premier rendu
     handleResize();
 
-    // Nettoyage de l'écouteur d'événements lors de la démonte du composant
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -68,9 +64,9 @@ const History = () => {
 <Image
   src={storyImage}
   alt="Introduction"
-  layout="responsive" // Cela permet de gérer le responsive design automatiquement
-  width={500} // Définissez la largeur souhaitée
-  height={300} // Définissez la hauteur souhaitée
+  layout="responsive" 
+  width={500} 
+  height={300} 
   style={{ marginTop: windowWidth < 769 ? '17%' : '4%' }}
 />
         <div className={styles.articleContent}>

@@ -13,12 +13,10 @@ const Tokenomics = () => {
     const [holders, setHolders] = useState<number | null>(null);
     const [price, setPrice] = useState<number | null>(null);
 
-    // Formatage de l'offre de tokens
     const formatTokenSupply = (supply: number | null) => {
         return supply !== null ? (supply / (10 ** 18)).toLocaleString('en-US') : 'Loading...';
     };
 
-    // Formatage du prix
     const formatPrice = (price: number | null) => {
         if (price === null || price === undefined || price <= 0) {
             return '$0.0000000740'; // Prix par défaut si price est indéfini ou <= 0
@@ -33,7 +31,6 @@ const Tokenomics = () => {
 
         const fetchData = async () => {
             try {
-                // Récupération de l'offre de tokens
                 const supplyResponse = await fetch(`https://api.polygonscan.com/api?module=stats&action=tokensupply&contractaddress=${contract_address}&apikey=${api_key}`);
                 const supplyData = await supplyResponse.json();
                 if (supplyData.status === '1') {
@@ -43,7 +40,6 @@ const Tokenomics = () => {
                     setTokenSupply(0); // Définir une valeur par défaut
                 }
 
-                // Récupération du montant brûlé
                 const burnResponse = await fetch(`https://api.polygonscan.com/api?module=account&action=tokenbalance&contractaddress=${contract_address}&address=0x000000000000000000000000000000000000dEaD&tag=latest&apikey=${api_key}`);
                 const burnData = await burnResponse.json();
                 if (burnData.status === '1') {
@@ -53,7 +49,6 @@ const Tokenomics = () => {
                     setBurnAmount(0); // Définir une valeur par défaut
                 }
 
-                // Récupération du nombre de détenteurs
                 const holdersResponse = await fetch(`https://api.chainbase.online/v1/token/holders?chain_id=137&contract_address=${contract_address}&page=1&limit=1`, {
                     headers: { "accept": "application/json", "x-api-key": '2dsjNimIMCdf5q0XqkYmIdRBe5o' }
                 });
@@ -74,17 +69,14 @@ const Tokenomics = () => {
         fetchData();
     }, []);
 
-    // Fonction pour ouvrir PolygonScan
     const handlePolygonScanButtonClick = () => {
         window.open('https://polygonscan.com/token/0x9b8cc6320f22325759b7d2ca5cd27347bb4ecd86#balances', '_blank');
     };
 
-    // Fonction pour ouvrir DexScreener
     const handleDexScreenerButtonClick = () => {
         window.open('https://dexscreener.com/polygon/0xbca71dcdb10fc273be867243a0c8addfb49e0418', '_blank');
     };
 
-    // Données des cartes
     const cardsData = [
         { title: 'Airdrop 🪂', content: 'Airdrop to all Lens profile holders on December 15th 2023 (125,089 recipients)', details: 'https://hey.xyz/posts/0x01dd85-0x0119' },
         { title: 'Treasury 💰', content: 'Treasury to cover expenses for which the breakdown can be found below' },
@@ -92,7 +84,6 @@ const Tokenomics = () => {
         { title: 'PartyBid 🎁', content: 'PartyBid early contributors allocations (1B $pointless)' }
     ];
 
-    // Couleurs des cartes
     const cardColors = [
         'linear-gradient(to bottom right, #2D422D, #162116)',
         'linear-gradient(to bottom right, #536C5B, #2E4A3A)',

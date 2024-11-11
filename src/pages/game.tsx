@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 import styles from '../styles/Socials.module.css';
 import homeStyles from '../styles/Home.module.css';
 
-// Importation des images pour chaque jeu
 import rouletteImage from '../img/roulette.gif';
 import russianrouletteImage from '../img/russianroulette.png';
 import diceImage from '../img/dice.png';
@@ -13,17 +12,15 @@ import coinImage from '../img/coin.gif';
 import fireflyImage from '../img/coin.gif';
 import utilityImage from '../img/utility.png';
 
-// Définition des types pour les props de GameCard
 interface GameCardProps {
   title: string;
-  imageSrc: StaticImageData; // Utiliser StaticImageData pour les images locales avec next/image
+  imageSrc: StaticImageData; 
   link: string;
   isHovered: boolean;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
 }
 
-// Composant de carte pour chaque jeu
 const GameCard: React.FC<GameCardProps> = ({
   title,
   imageSrc,

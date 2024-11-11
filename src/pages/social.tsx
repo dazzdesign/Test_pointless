@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 import styles from '../styles/Socials.module.css';
 import homeStyles from '../styles/Home.module.css';
 
-// Importation des images pour chaque réseau social
 import kairaImage from '../img/kaira.png';
 import heyImage from '../img/hey.png';
 import orbImage from '../img/orb.png';
@@ -14,10 +13,9 @@ import fireflyImage from '../img/firefly.png';
 import bloomersImage from '../img/bloomers.png';
 import utilityImage from '../img/utility.png';
 
-// Définition des types pour les props de SocialCard
 interface SocialCardProps {
   title: string;
-  imageSrc: StaticImageData; // Type utilisé pour les images importées localement avec next/image
+  imageSrc: StaticImageData; 
   description: string;
   features: string[];
   link: string;
@@ -26,7 +24,6 @@ interface SocialCardProps {
   onMouseLeave: () => void;
 }
 
-// Composant de carte pour chaque réseau social
 const SocialCard: React.FC<SocialCardProps> = ({
   title,
   imageSrc,
@@ -66,7 +63,6 @@ const Socials: React.FC = () => {
     bloomers: false,
   });
 
-  // Typage de `card` comme string et `isHovered` comme boolean
   const handleHover = (card: string, isHovered: boolean) => {
     setHoverStates((prev) => ({ ...prev, [card]: isHovered }));
   };

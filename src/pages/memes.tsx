@@ -6,14 +6,13 @@ import Navbar from '../components/Navbar';
 import styles from '../styles/Memes.module.css'; // Nouveau fichier de styles pour la page memes
 import homeStyles from '../styles/Home.module.css';
 
-// Importation des images des memes
+
 import kairaImage from '../img/memes1.jpg';
 import heyImage from '../img/memes2.jpg';
 import orbImage from '../img/memes3.jpg';
 
 import utilityImage from '../img/titlemuseum.png';
 
-// Définir les types des props pour MemeCard
 interface MemeCardProps {
     title: string;
     imageSrc: string;
@@ -23,7 +22,6 @@ interface MemeCardProps {
     onMouseLeave: () => void;
 }
 
-// Composant de carte pour chaque meme
 const MemeCard: React.FC<MemeCardProps> = ({
     title,
     imageSrc,

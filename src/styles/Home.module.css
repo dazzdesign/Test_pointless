@@ -1,148 +1,135 @@
-/* Styles de base */
 .container {
-  padding: 0 2rem; /* Espacement latéral */
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centre verticalement tout le contenu */
+  justify-content: center;
   min-height: 100vh;
-  background-color: #2C3930; /* Couleur de fond sombre pour un contraste agréable */
-  /* font-family: 'Poppins', sans-serif; */ /* Suppression de la police */
+  background-color: #2C3930;
 }
 
-/* Image d'introduction */
 .introImage {
   display: flex;
   justify-content: center;
-  margin: 0 0 2rem; /* Espacement en dessous de l'image */
+  margin: 0 0 2rem;
 }
 
 .introImage img {
-  max-width: 100%; /* Assurer que l'image soit responsive */
+  max-width: 100%;
   height: auto;
-  border-radius: 10px; /* Coins arrondis pour un effet moderne */
+  border-radius: 10px;
 }
 
-/* Styles principaux */
 .main {
-  flex: 1; /* Utilise tout l'espace restant */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #fff; /* Texte en blanc pour contraster avec le fond sombre */
-  padding: 2rem 0; /* Espacement vertical pour une présentation aérée */
+  color: #fff;
+  padding: 2rem 0;
 }
 
-/* Titre et description */
 .title {
-  font-size: 3rem; /* Taille de titre imposante */
-  color: #ffffff; /* Couleur de titre */
-  margin: 1.5rem 0; /* Ajoute de l'espace au-dessus et en dessous du titre */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ombre du texte pour un effet de profondeur */
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 1.5rem 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .description {
-  font-size: 1.5rem; /* Taille du texte descriptif */
-  color: #fff; /* Couleur du texte descriptif */
-  margin: 0 0 2rem; /* Ajoute de l'espace au-dessus et en dessous */
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0 0 2rem;
 }
 
-/* Conteneur pour les boutons */
 .buttonContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Permet aux boutons de passer à la ligne */
-  margin: 1.5rem 0; /* Ajoute un espace au-dessus et en dessous des boutons */
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
 }
 
-/* Boutons principaux (PolygonScan, DexScreener, Buy $pointless) */
 .customButton {
-  background-color: #BFE1C9; /* Couleur de fond */
+  background-color: #BFE1C9;
   color: #2C3930;
-  padding: 0.8rem 1.5rem; /* Rembourrage confortable */
+  padding: 0.8rem 1.5rem;
   border: none;
-  border-radius: 8px; /* Coins arrondis */
-  font-size: 1rem; /* Taille de police */
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  margin: 0 1rem; /* Ajoute un espacement de 1rem de chaque côté des boutons */
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Ajoute un effet de transition */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre pour donner de la profondeur */
+  margin: 0 1rem;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .customButton:hover {
-  background-color: #BFE1C9; /* Couleur au survol */
-  transform: translateY(-2px); /* Léger mouvement vers le haut au survol */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Ombre renforcée au survol */
+  background-color: #BFE1C9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* Boutons d'approbation et d'envoi */
 .approveButton, .sendButton {
   background-color: #BFE1C9;
   color: #2C3930;
-  padding: 0.8rem 1.5rem; /* Rembourrage confortable */
+  padding: 0.8rem 1.5rem;
   border: none;
-  border-radius: 8px; /* Coins arrondis */
-  font-size: 1.1rem; /* Taille de police plus grande */
+  border-radius: 8px;
+  font-size: 1.1rem;
   cursor: pointer;
-  margin: 0 1rem; /* Ajoute un espacement de 1rem de chaque côté des boutons */
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Ajoute un effet de transition */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre pour donner de la profondeur */
+  margin: 0 1rem;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .approveButton:hover, .sendButton:hover {
-  background-color: #BFE1C9; /* Couleur au survol */
-  transform: translateY(-2px); /* Léger mouvement vers le haut au survol */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Ombre renforcée au survol */
+  background-color: #BFE1C9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .approveButton:disabled, .sendButton:disabled {
-  background-color: #ccc; /* Couleur pour le bouton désactivé */
-  cursor: not-allowed; /* Change le curseur au survol */
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
-/* Champ de saisie */
 .input {
   width: 100%;
-  max-width: 320px; /* Largeur maximale pour le champ */
-  padding: 0.8rem; /* Rembourrage du champ */
-  border: 2px solid #BFE1C9; /* Bordure de couleur */
-  border-radius: 5px; /* Coins arrondis pour le champ */
-  font-size: 1rem; /* Taille de police */
-  margin-bottom: 1.5rem; /* Espacement sous le champ */
-  outline: none; /* Enlève l'effet de contour par défaut */
-  transition: border-color 0.3s; /* Transition douce pour la bordure */
-  color: #2C3930; /* Couleur de texte pour le champ */
-  background-color: #fff; /* Fond blanc pour le champ */
+  max-width: 320px;
+  padding: 0.8rem;
+  border: 2px solid #BFE1C9;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  outline: none;
+  transition: border-color 0.3s;
+  color: #2C3930;
+  background-color: #fff;
 }
 
 .input:focus {
-  border-color: #BFE1C9; /* Bordure au focus */
+  border-color: #BFE1C9;
 }
 
-/* Pied de page */
 .footer {
   width: 100%;
-  padding: 1rem; /* Ajoute un peu plus d'espace dans le pied de page */
-  background-color: #2c3930; /* Couleur de fond claire */
+  padding: 1rem;
+  background-color: #2c3930;
   text-align: center;
   position: relative;
   bottom: 0;
-  margin-top: 30px; /* Ajoute un espace entre le contenu et le pied de page */
+  margin-top: 30px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .buttonContainer {
-    flex-direction: column; /* Aligne les boutons verticalement sur les petits écrans */
-    align-items: center; /* Centre les boutons */
+    flex-direction: column;
+    align-items: center;
   }
 
   .customButton, .approveButton, .sendButton {
-    width: 100%; /* Les boutons prennent toute la largeur */
-    max-width: 280px; /* Limiter la largeur maximale pour les petits écrans */
-    margin: 0.75rem 0; /* Ajoute de l'espacement entre les boutons verticalement */
+    width: 100%;
+    max-width: 280px;
+    margin: 0.75rem 0;
   }
 }
-
-
