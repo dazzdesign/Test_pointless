@@ -1,0 +1,148 @@
+/* Styles de la barre de navigation */
+.navbar {
+  width: 100%;
+  background-color: transparent; /* Fond transparent */
+  padding: 1rem 2rem; /* Espacement pour un peu d'air */
+}
+
+/* Container pour la navigation */
+.nav {
+  display: flex;
+  align-items: center; /* Centrer verticalement */
+  justify-content: space-between; /* Espacer les éléments */
+  max-width: 1200px; /* Largeur maximale de la barre de navigation */
+  margin: 0 auto; /* Centrer la navigation */
+}
+
+/* Styles pour le logo */
+.nameDomain {
+  display: flex;
+  align-items: center; /* Centrer verticalement l'image */
+}
+
+/* Ajustement du logo */
+.nameDomain img {
+  max-width: 200px; /* Taille du logo */
+  height: auto; /* Préserver les proportions */
+  margin-right: 1rem; /* Espacement après le logo */
+}
+
+/* Liens de navigation */
+.navLinks {
+  display: flex;
+  gap: 20px; /* Espace entre les liens */
+}
+
+/* Styles pour le menu déroulant */
+.dropdown {
+  position: relative; /* Nécessaire pour le menu déroulant */
+  display: inline-block;
+}
+
+.dropdownToggle {
+  color: #fff; /* Couleur du texte des liens */
+  text-decoration: none;
+  font-size: 1.1rem; /* Taille du texte */
+  padding: 0.5rem 1rem; /* Ajout de padding pour une zone de clic plus grande */
+  transition: color 0.3s ease;
+}
+
+.dropdownToggle:hover {
+  color: #BFE1C9; /* Couleur du lien au survol */
+}
+
+/* Contenu du menu déroulant (caché par défaut) */
+.dropdownContent {
+  display: none; /* Masqué par défaut */
+  position: absolute;
+  background-color: #222831; /* Fond sombre et sobre */
+  border-bottom-left-radius: 8px; /* Bord arrondi en bas à gauche */
+  border-bottom-right-radius: 8px; /* Bord arrondi en bas à droite */
+  min-width: 160px; /* Largeur minimale */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet flottant */
+  z-index: 1; /* Superposition */
+  overflow: hidden; /* Masquer tout débordement */
+}
+
+/* Apparence des liens dans le menu déroulant */
+.dropdownContent a {
+  color: #ecf0f1; /* Couleur des liens */
+  padding: 12px 16px; /* Espacement interne pour chaque lien */
+  text-decoration: none; /* Supprimer le soulignement */
+  display: block; /* Prendre toute la largeur */
+  transition: background-color 0.3s ease;
+}
+
+.dropdownContent a:hover {
+  background-color: #34495e; /* Changement de couleur de fond au survol */
+}
+
+/* Afficher le menu déroulant lors du survol */
+.dropdown:hover .dropdownContent {
+  display: block; /* Rendre visible le menu au survol */
+  animation: fadeIn 0.3s ease; /* Animation d'apparition fluide */
+}
+
+/* Animation d'apparition du menu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styles des liens principaux */
+.navLinks a {
+  color: #fff; /* Blanc pour les liens principaux */
+  text-decoration: none; /* Pas de soulignement */
+  font-size: 1.1rem;
+  transition: color 0.3s ease; /* Transition fluide sur la couleur */
+}
+
+.navLinks a:hover {
+  color: #BFE1C9; /* Changer la couleur au survol */
+}
+
+/* Styles pour la section de connexion et de balance */
+.connectSection {
+  display: flex; /* Centrer les éléments */
+  justify-content: space-between; /* Espacement entre la balance et le bouton */
+  align-items: center; /* Aligner verticalement */
+  padding: 0 2rem; /* Espacement horizontal autour de la section */
+  background-color: transparent; /* Fond transparent */
+}
+
+/* Styles pour le conteneur de la balance */
+.balanceContainer {
+  display: flex; /* Flexbox pour l'alignement */
+  align-items: center; /* Aligner verticalement */
+}
+
+/* Styles pour le texte de la balance */
+.balanceText {
+  color: #fff; /* Couleur du texte */
+  margin-right: 10px; /* Espacement entre le texte et l'icône */
+}
+
+/* Styles responsives */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column; /* Passer les éléments en colonne */
+    align-items: flex-start; /* Aligner à gauche */
+  }
+
+  .navLinks {
+    flex-direction: column; /* Liens en colonne */
+    gap: 10px; /* Espacement réduit */
+  }
+
+  .connectSection {
+    flex-direction: column; /* Disposer les éléments en colonne sur mobile */
+    align-items: flex-start; /* Aligner à gauche */
+    padding: 1rem; /* Espacement réduit pour mobile */
+  }
+}

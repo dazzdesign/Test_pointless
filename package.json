@@ -1,0 +1,30 @@
+{
+  "name": "pt-bridge",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@layerzerolabs/lz-v2-utilities": "^2.3.35",
+    "@rainbow-me/rainbowkit": "^2.1.4",
+    "@tanstack/react-query": "^5.51.11",
+    "ethers": "^6.13.2",
+    "hardhat": "^2.22.8",
+    "next": "^14.2.15",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "sharp": "^0.33.5",
+    "viem": "2.17.0",
+    "wagmi": "^2.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.3",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^9.13.0",
+    "typescript": "5.4.2"
+  }
+}

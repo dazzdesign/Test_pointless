@@ -1,0 +1,148 @@
+:root {
+  /* Couleurs */
+  --dark-green: #2c3930;   /* Vert foncé */
+  --light-green: #C3E5CD;  /* Vert clair */
+  --yellow: #FCE38A;       /* Jaune */
+  --pink: #F38181;         /* Rose */
+  --white: #ffffff;        /* Blanc */
+  --black: #000000;        /* Noir */
+  --gray-light: #f4f4f4;   /* Gris clair */
+  --gray-border: #ccc;     /* Gris pour les bordures */
+}
+
+/* Styles globaux */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; /* Police moderne et lisible */
+  font-size: 16px; /* Taille de police de base */
+  line-height: 1.6; /* Espacement entre les lignes pour améliorer la lisibilité */
+  background-color: var(--gray-light); /* Fond clair pour un contraste doux */
+  color: var(--white); /* Texte global en blanc */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Typographie spécifique aux titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif; /* Police cohérente pour les titres */
+  font-weight: 700;
+  margin-bottom: 0.5rem; /* Espacement sous les titres */
+  color: var(--white); /* Titres en blanc */
+}
+
+h1 { font-size: 2.5rem; }  /* Taille de titre principale */
+h2 { font-size: 2rem; }    /* Taille pour les sous-titres */
+h3 { font-size: 1.75rem; } /* Taille pour les titres de niveau 3 */
+h4 { font-size: 1.5rem; }  /* Taille pour les titres de niveau 4 */
+h5 { font-size: 1.25rem; } /* Taille pour les titres de niveau 5 */
+h6 { font-size: 1rem; }    /* Taille pour les titres de niveau 6 */
+
+/* Paragraphes et textes principaux */
+p {
+  font-size: 1rem; /* Taille de texte standard */
+  margin-bottom: 1rem; /* Espacement sous les paragraphes */
+  line-height: 1.8; /* Augmentation de l'espacement pour une lecture agréable */
+  color: var(--white); /* Texte en blanc */
+}
+
+/* Liens */
+a {
+  color: var(--white); /* Liens en blanc */
+  text-decoration: none; /* Pas de souligné */
+  transition: color 0.3s ease; /* Transition fluide pour le survol */
+}
+
+a:hover {
+  color: var(--pink); /* Changer la couleur en rose au survol */
+}
+
+/* Conteneur global */
+.container {
+  max-width: 1200px; /* Largeur maximale du conteneur */
+  margin: 0 auto; /* Centrer le contenu */
+  padding: 2rem; /* Espacement intérieur */
+  background-color: var(--dark-green); /* Fond vert foncé */
+  border-radius: 10px; /* Coins arrondis pour un aspect moderne */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet de profondeur */
+}
+
+/* Formulaires */
+input, select, textarea {
+  font-size: 1rem;
+  padding: 0.8rem; /* Espacement intérieur confortable */
+  border: 1px solid var(--gray-border); /* Bordure gris clair */
+  border-radius: 5px; /* Coins arrondis */
+  width: 100%; /* Prendre toute la largeur */
+  box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+  margin-bottom: 1rem; /* Espacement entre les champs */
+  color: var(--white); /* Texte en blanc dans les champs de formulaire */
+  background-color: var(--dark-green); /* Fond vert foncé pour les champs */
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--light-green); /* Bordure claire au focus */
+  outline: none; /* Suppression du contour par défaut */
+}
+
+/* Boutons */
+button {
+  padding: 0.8rem 1.5rem; /* Espacement confortable */
+  font-size: 1rem; /* Taille de texte confortable */
+  background-color: var(--dark-green); /* Fond vert foncé */
+  color: var(--white); /* Texte en blanc */
+  border: none;
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur en forme de main */
+  transition: background-color 0.3s ease; /* Transition pour le fond */
+}
+
+button:disabled {
+  background-color: var(--gray-border); /* Fond gris lorsqu'il est désactivé */
+  cursor: not-allowed; /* Curseur de non-disponibilité */
+}
+
+/* En-tête */
+header {
+  background-color: var(--dark-green); /* Fond uni sans dégradé */
+  color: var(--white); /* Texte blanc */
+  padding: 1.5rem 2rem; /* Espacement intérieur */
+  text-align: center; /* Centrage du texte */
+  border-radius: 10px 10px 0 0; /* Coins arrondis en haut */
+}
+
+/* Pied de page */
+footer {
+  background-color: var(--dark-green); /* Fond uni sans dégradé */
+  color: var(--white); /* Texte blanc */
+  text-align: center; /* Centrer le texte */
+  padding: 1rem; /* Espacement intérieur */
+  margin-top: 2rem; /* Espacement au-dessus */
+  border-radius: 0 0 10px 10px; /* Coins arrondis en bas */
+}
+
+/* Section "Détails" */
+.cardButton {
+  padding: 10px 20px; /* Espacement confortable */
+  font-size: 1rem; /* Taille de texte */
+  background-color: var(--dark-green); /* Fond vert foncé sans dégradé */
+  color: var(--white); /* Texte blanc */
+  border-radius: 5px; /* Coins arrondis */
+  border: none; /* Pas de bordure */
+  cursor: pointer; /* Curseur en forme de main */
+  transition: background 0.3s ease, color 0.3s ease; /* Transition fluide */
+}
+
+.cardButton:hover {
+  background-color: var(--pink); /* Fond rose au survol */
+  color: var(--black); /* Texte noir pour un contraste optimal */
+}
+
+.cardButton:disabled {
+  background-color: var(--gray-border); /* Fond gris lorsqu'il est désactivé */
+  cursor: not-allowed; /* Curseur de non-disponibilité */
+  color: var(--white); /* Texte blanc même en état désactivé */
+}

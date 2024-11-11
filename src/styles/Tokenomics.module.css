@@ -1,0 +1,137 @@
+/* Tokenomics.module.css */
+
+.container {
+    min-height: 100vh; /* Hauteur minimale pour remplir l'écran */
+    background: #2C3930; /* Couleur de fond sombre */
+    color: white; /* Couleur du texte */
+    /* font-family: 'Poppins', sans-serif; */ /* Suppression de la police */
+    padding: 20px; /* Espacement intérieur */
+}
+
+.main {
+    max-width: 1200px; /* Largeur maximale du conteneur principal */
+    margin: 0 auto; /* Centrage horizontal */
+    text-align: center; /* Centrage du texte */
+}
+
+.titleImage {
+    max-width: 100%; /* S'adapte à la largeur du conteneur */
+    height: auto; /* Conserve le ratio d'aspect */
+    margin: 20px 0; /* Espacement vertical */
+}
+
+/* Conteneur pour le tableau d'overview */
+.tokenOverviewContainer {
+    overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
+    margin: 20px 0; /* Marges verticales */
+}
+
+.tokenOverviewTable {
+    width: 100%; /* Largeur complète du tableau */
+    min-width: 600px; /* Largeur minimale pour le tableau */
+    border-collapse: collapse; /* Supprime l'espace entre les bordures */
+}
+
+.tokenOverviewTable th {
+    padding: 10px; /* Espacement intérieur */
+    background: linear-gradient(to bottom right, #2D422D, #162116); /* Dégradé pour l'en-tête */
+    color: white; /* Couleur du texte de l'en-tête */
+}
+
+.tokenOverviewTable td {
+    padding: 20px; /* Espacement intérieur */
+    background: linear-gradient(to bottom right, #536C5B, #2E4A3A); /* Dégradé pour les cellules */
+    text-align: center; /* Centre le texte */
+}
+
+.buttonContainer {
+    display: flex; /* Utilise le flexbox pour aligner les boutons */
+    justify-content: center; /* Centre horizontalement les boutons */
+    margin-top: 20px; /* Marges supérieures */
+}
+
+.buttonContainer button {
+    margin: 0 10px; /* Espacement horizontal entre les boutons */
+    padding: 10px 20px; /* Espacement intérieur */
+    background: #2D422D; /* Couleur de fond pour les boutons */
+    color: white; /* Couleur du texte des boutons */
+    border: none; /* Aucune bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en forme de main */
+    transition: background 0.3s; /* Transition pour effet au survol */
+}
+
+.buttonContainer button:hover {
+    background: #3B5A3B; /* Couleur de fond au survol */
+}
+
+.cardsContainer {
+    display: flex; /* Utilise le flexbox pour disposer les cartes */
+    justify-content: space-around; /* Espacement uniforme entre les cartes */
+    flex-wrap: wrap; /* Permet le passage à la ligne si nécessaire */
+    margin-top: 20px; /* Marges supérieures */
+}
+
+.card {
+    padding: 20px; /* Espacement intérieur de la carte */
+    border-radius: 10px; /* Coins arrondis de la carte */
+    margin: 10px; /* Marges entre les cartes */
+    width: 200px; /* Largeur fixe pour chaque carte */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre pour un effet de profondeur */
+    transition: transform 0.3s; /* Transition pour effet de transformation */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+.breakdownContainer {
+    margin-top: 40px; /* Marges supérieures */
+    padding: 20px; /* Espacement intérieur */
+    background: linear-gradient(to bottom right, #2D422D, #162116); /* Dégradé de fond */
+    border-radius: 10px; /* Coins arrondis pour le conteneur */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre pour profondeur */
+}
+
+.breakdownImage {
+    margin-top: 20px; /* Marges supérieures */
+    max-width: 100%; /* S'adapte à la largeur du conteneur */
+    height: auto; /* Conserve le ratio d'aspect */
+}
+
+.breakdownList {
+    color: white; /* Couleur du texte de la liste */
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime le remplissage */
+    /* font-size: 1.2rem; */ /* Suppression de la taille de police */
+}
+
+.breakdownList h5 {
+    font-weight: normal; /* Poids de police normal */
+    margin-top: 10px; /* Marges supérieures */
+    /* font-size: 1rem; */ /* Suppression de la taille de police pour les notes */
+}
+
+/* Conteneur d'images */
+.imageContainer {
+    display: flex; /* Utilise le flexbox pour contrôler l'alignement */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center; /* Centre les images horizontalement */
+}
+
+/* Pied de page */
+.footer {
+    width: 100%;
+    padding: 1rem; /* Ajoute un peu plus d'espace dans le pied de page */
+    background-color: #2c3930; /* Couleur de fond claire */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    margin-top: 30px; /* Ajoute un espace entre le contenu et le pied de page */
+}
+
+.graphImage {
+    width: 100%; /* S'adapte à la largeur du conteneur */
+    max-width: 500px; /* Taille maximale de l'image */
+    height: auto; /* Conserve le ratio d'aspect */
+}
