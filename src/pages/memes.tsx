@@ -13,8 +13,18 @@ import orbImage from '../img/memes3.jpg';
 
 import utilityImage from '../img/titlemuseum.png';
 
+// Définir les types des props pour MemeCard
+interface MemeCardProps {
+    title: string;
+    imageSrc: string;
+    description: string;
+    isHovered: boolean;
+    onMouseEnter: () => void;
+    onMouseLeave: () => void;
+}
+
 // Composant de carte pour chaque meme
-const MemeCard = ({
+const MemeCard: React.FC<MemeCardProps> = ({
     title,
     imageSrc,
     description,
@@ -40,7 +50,7 @@ const Memes = () => {
         orb: false,
     });
 
-    const handleHover = (card, isHovered) => {
+    const handleHover = (card: string, isHovered: boolean) => {
         setHoverStates((prev) => ({ ...prev, [card]: isHovered }));
     };
 
@@ -62,19 +72,25 @@ const Memes = () => {
                 </p>
                 <section className={styles.cardContainer}>
                     <MemeCard
+                        title="Kaira Meme"
                         imageSrc={kairaImage}
+                        description="A funny Kaira meme."
                         isHovered={hoverStates.kaira}
                         onMouseEnter={() => handleHover('kaira', true)}
                         onMouseLeave={() => handleHover('kaira', false)}
                     />
                     <MemeCard
+                        title="Hey Meme"
                         imageSrc={heyImage}
+                        description="A hilarious 'Hey' meme."
                         isHovered={hoverStates.hey}
                         onMouseEnter={() => handleHover('hey', true)}
                         onMouseLeave={() => handleHover('hey', false)}
                     />
                     <MemeCard
+                        title="Orb Meme"
                         imageSrc={orbImage}
+                        description="An amusing Orb meme."
                         isHovered={hoverStates.orb}
                         onMouseEnter={() => handleHover('orb', true)}
                         onMouseLeave={() => handleHover('orb', false)}
