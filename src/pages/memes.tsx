@@ -16,7 +16,7 @@ import utilityImage from '../img/titlemuseum.png';
 // Définir les types des props pour MemeCard
 interface MemeCardProps {
     title: string;
-    imageSrc: string; // On attend maintenant une chaîne de caractères pour l'URL de l'image
+    imageSrc: string;
     description: string;
     isHovered: boolean;
     onMouseEnter: () => void;
@@ -72,24 +72,21 @@ const Memes = () => {
                 </p>
                 <section className={styles.cardContainer}>
                     <MemeCard
-                        title="Kaira Meme"
-                        imageSrc={kairaImage.src}  {/* Utilisation de kairaImage.src pour obtenir l'URL de l'image */}
+                        imageSrc={kairaImage}
                         description="A funny Kaira meme."
                         isHovered={hoverStates.kaira}
                         onMouseEnter={() => handleHover('kaira', true)}
                         onMouseLeave={() => handleHover('kaira', false)}
                     />
                     <MemeCard
-                        title="Hey Meme"
-                        imageSrc={heyImage.src}  {/* Utilisation de heyImage.src pour obtenir l'URL de l'image */}
+                        imageSrc={heyImage}
                         description="A hilarious 'Hey' meme."
                         isHovered={hoverStates.hey}
                         onMouseEnter={() => handleHover('hey', true)}
                         onMouseLeave={() => handleHover('hey', false)}
                     />
                     <MemeCard
-                        title="Orb Meme"
-                        imageSrc={orbImage.src}  {/* Utilisation de orbImage.src pour obtenir l'URL de l'image */}
+                        imageSrc={orbImage}
                         description="An amusing Orb meme."
                         isHovered={hoverStates.orb}
                         onMouseEnter={() => handleHover('orb', true)}
