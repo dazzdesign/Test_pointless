@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image'; // Import de StaticImageData
 import Navbar from '../components/Navbar';
 import styles from '../styles/Socials.module.css';
 import homeStyles from '../styles/Home.module.css';
@@ -16,7 +16,7 @@ import utilityImage from '../img/utility.png';
 // Définition des types pour les props de GameCard
 interface GameCardProps {
   title: string;
-  imageSrc: StaticImageData; // Utiliser StaticImageData si vous importez des images locales avec next/image
+  imageSrc: StaticImageData; // Utiliser StaticImageData pour les images locales avec next/image
   link: string;
   isHovered: boolean;
   onMouseEnter: () => void;
@@ -68,7 +68,14 @@ const Games = () => {
 
       <Navbar />
 
-      <Image src={utilityImage} alt="Introduction" layout="responsive" width={1000} height={500} className={styles.utilityImage} />
+      <Image
+        src={utilityImage}
+        alt="Introduction"
+        layout="responsive"
+        width={1000}
+        height={500}
+        className={styles.utilityImage}
+      />
 
       <main className={styles.main}>
         <section className={styles.cardContainer}>
